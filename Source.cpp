@@ -19,6 +19,7 @@ int main()
 	{
 		int answer = 99;
 		int FirstNum = Num % 10;
-		int SecondNum = Num 
+		int SecondNum = (Num / 10) % 10;
+		int ThirdNum = (Num / 100) % 10;
 	}
 }
