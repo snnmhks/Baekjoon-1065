@@ -15,11 +15,20 @@ int main()
 	{
 		cout << Num << endl;
 	}
-	else if (Num / 1000 == 0)
+	else
 	{
 		int answer = 99;
-		int FirstNum = Num % 10;
-		int SecondNum = (Num / 10) % 10;
-		int ThirdNum = (Num / 100) % 10;
+		for (int i = 100; i <= Num; i++)
+		{
+			int FirstNum = i % 10;
+			int SecondNum = (i / 10) % 10;
+			int ThirdNum = (i / 100) % 10;
+			int interval = FirstNum - SecondNum;
+			if (SecondNum - interval == ThirdNum)
+			{
+				answer++;
+			}
+		}
+		cout << answer << endl;
 	}
 }
